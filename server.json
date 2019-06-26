@@ -1,0 +1,37 @@
+
+{
+    "global": {
+        "verbose": false,
+        "publicIP": "199.192.22.174",
+        "serverName": "change-me",
+        "fxServerPort": 30120
+    },
+    "logger": {},
+    "monitor": {
+        "timeout": 1000,
+        "restarter": {
+            "failures": 15,
+            "schedule": ["05:00", "13:00"]
+        }
+    },
+    "authenticator": {
+        "adminsFilePath": "data/admins.json"
+    },
+    "webServer": {
+        "port": 40120
+    },
+    "discordBot": {
+        "enabled": false,
+        "token": "change-me",
+        "messagesFilePath": "data/messages.json",
+        "statusCommand": "/status"
+    },
+    "fxRunner": {
+        "buildPath": "/home/fivem/fx-server",
+        "basePath": "/home/fivem/fx-server-data",
+        "cfgPath": "/home/fivem/fx-server-data/server.cfg",
+        "setPriority": false,
+        "onesync": false,
+        "autostart": true
+    }
+}
